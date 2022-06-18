@@ -38,6 +38,7 @@ public class AuthorizationController {
 	@Autowired
 	private UsersDataService userDataService;
 
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping(value = "/login")
 	public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest userLoginCredentials) {
 		log.info("Entering login controller method!!!");
